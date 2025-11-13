@@ -34,13 +34,15 @@
     main{flex:1;position:relative;}
     section{
       min-height:100vh;padding:140px 20px 60px;display:flex;align-items:center;justify-content:center;position:absolute;top:0;left:0;width:100%;opacity:0;transition:opacity 0.8s ease-in-out;
+      background-size: cover;
+      background-position: center;
     }
     section.active{opacity:1;}
 
     .card{
       max-width:800px;width:90%;background:linear-gradient(135deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
       padding:36px;border-radius:18px;backdrop-filter:blur(var(--blur));box-shadow:0 8px 30px rgba(2,2,8,0.6);
-      border:1px solid rgba(255,255,255,0.04);position:relative;z-index:10;text-align:center;
+      border:1px solid rgba(255,255,255,0.04);position:relative;z-index:10;text-align:center;word-wrap:break-word;
     }
     h2{margin:0 0 12px 0;opacity:0;transform:translateY(20px);animation:fadeSlideIn 1.5s forwards ease-in-out;}
 
@@ -53,7 +55,7 @@
     .glow-emoji{font-size:34px;display:inline-block;padding:6px;border-radius:50%;animation:float 4s ease-in-out infinite;filter:drop-shadow(0 0 12px rgba(255,120,160,0.45));}
     @keyframes float{0%{transform:translateY(0)}50%{transform:translateY(-8px)}100%{transform:translateY(0)}}
 
-    .petals{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+    .petals{position:absolute;inset:0;pointer-events:none;overflow:hidden; z-index:5}
     .petal{position:absolute;width:28px;height:28px;background:radial-gradient(circle at 40% 30%, rgba(255,183,197,0.95), rgba(255,115,140,0.8));border-radius:50%;opacity:0.85;transform:rotate(20deg);animation:petalFloat linear infinite}
     @keyframes petalFloat{from{transform:translateY(-10vh) rotate(0deg);opacity:0}25%{opacity:0.9}to{transform:translateY(120vh) rotate(360deg);opacity:0}}
 
@@ -103,14 +105,14 @@
     </header>
 
     <main>
-      <section id="intro" class="intro active">
+      <section id="intro" class="intro active" style="background-image:linear-gradient(180deg, rgba(10,5,20,0.3), rgba(5,2,15,0.7)), url('https://wallpapers.com/images/hd/anime-romantic-stars-0jgeoodxtcmwhw1z.jpg');">
         <div class="card">
           <h2>Congratulations on Your Marriage! <span class="glow-emoji">💖</span></h2>
           <p class="lead">Celebrating the beautiful union of <strong>Chandan & Suhani</strong>. May your journey together be filled with endless love, laughter, and happiness!</p>
         </div>
       </section>
 
-      <section id="home" class="home">
+      <section id="home" class="home" style="background-image:linear-gradient(180deg, rgba(5,4,10,0.25), rgba(5,4,10,0.6)), url('https://i.pinimg.com/736x/54/ac/34/54ac34b5d7760f2c24766cb229d5ca5c.jpg');">
         <div class="card">
           <h2>Welcome to our celebration <span class="glow-emoji">🌅</span></h2>
           <p class="lead typing" data-text="Join Chandan & Suhani as they step into a new chapter. Save the date, share wishes, and celebrate love."></p>
@@ -119,7 +121,7 @@
         <div class="petals" aria-hidden="true"></div>
       </section>
 
-      <section id="story" class="story">
+      <section id="story" class="story" style="background-image:linear-gradient(180deg, rgba(3,6,23,0.25), rgba(2,3,12,0.6)), url('https://wallpapers.com/images/hd/aesthetic-anime-city-with-world-tree-0jgeoodxtcmwhw1z.jpg');">
         <div class="card">
           <h2>Our Story <span class="glow-emoji">✨</span></h2>
           <p class="lead typing" data-text="We met under surprising skies and found home in each other's laughter. From first meeting to forever — here's our journey, in short snapshots and whispered memories."></p>
@@ -127,7 +129,7 @@
         </div>
       </section>
 
-      <section id="wishes" class="wishes">
+      <section id="wishes" class="wishes" style="background-image:linear-gradient(180deg, rgba(20,6,8,0.25), rgba(5,2,2,0.6)), url('https://wallpapers.com/images/hd/purple-sky-anime-city-jfyl3kuulzsbh0oa.jpg');">
         <div class="card">
           <h2>Wishes &amp; Messages <span class="glow-emoji">🌹</span></h2>
           <p class="lead typing" data-text="Leave your love, blessings, and a small wish for the couple. Your words mean the world."></p>
